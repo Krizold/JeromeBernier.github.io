@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+
+/* Styles de base */
+body {
+    line-height: 1.6;
+    color: #e7e5dd;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* Appliquez la police Lato au texte de corps et aux autres éléments */
+body, p, ul, ol, input, button {
+    font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+a {
+    color: #f4c242;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* En-tête */
+header {
+    padding: 2rem;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    display: inline;
+    color: #f4c242;
+}
+
+header nav {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%; /* Ajustez cette valeur selon vos préférences */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+header nav ul li {
+    margin-left: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+/* Accueil */
+#accueil h1 {
+    font-size: 3rem;
+}
+
+
+/* Section Compétences */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.skill-card {
+    background-color: var(--main-background);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+}
+/* Modifier la couleur de fond de la section Compétences */
+#skills {
+    background-color: #222; 
+}
+
+/* Projets */
+#projets .projet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: #444;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+#projets .projet:hover {
+    transform: translateY(-1rem);
+}
+
+#projets .filter-btn {
+    background-color: #f4c242;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+/* À propos */
+#a-propos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#a-propos {
+    background-color: #222; 
+}
+.about-container {
+    max-width: 800px; /* Limitez la largeur à une valeur confortable pour la lecture */
+    margin: 0 auto; /* Centrez le conteneur sur la page */
+    text-align: left; /* Alignez le texte à gauche */
+    line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+    font-size: 1rem; /* Ajustez la taille de la police si nécessaire */
+}
+
+/* Contact */
+#contact form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+.contact-section {
+    margin: 0 auto; /* Centrez la section sur la page */
+    padding: 4rem 0; /* Ajustez l'espacement intérieur en fonction de vos préférences */
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#contact button {
+    background-color: #f4c242;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* Pied de page */
+footer {
+    background-color: #222;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    #competences ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Ajouter cette classe aux sections pour les animer */
+.animate {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Effet parallaxe */
+#parallax {
+    background-image: url('./img/pic4.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+}
+#parallax2 {
+    background-image: url('./img/Krizold_timesquare_postapocalyptic.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+header nav ul li a:hover,
+#projets .filter-btn:hover,
+#contact button:hover {
+    background-color: #333;
+    color: #f4c242;
+}
+
+#projets .filter-btn.active {
+    background-color: #333;
+    color: #f4c242;
+}
+/* Photo de profil */
+.profile-photo {
+    margin-top: 1rem;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Section accueil */
+#accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+/* Centrer la div carousel-container */
+#projets .carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Ajustement de la position des boutons de navigation et des puces */
+#projets .owl-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* Ajustement des boutons de navigation */
+#projets .owl-prev,
+#projets .owl-next {
+    position: static;
+    margin: 0 1rem; /* Augmenter la marge pour éviter le chevauchement */
+}
+
+/* Ajustement des boutons et de la taille de la police */
+#projets .owl-nav button {
+    pointer-events: all;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 14px; /* Ajustez la taille de la police */
+    padding: 6px 12px; /* Modifiez la taille du bouton en ajustant le padding */
+    border-radius: 3px;
+    margin: 0 1rem;
+    width: 80px; /* Ajoutez une largeur fixe pour les boutons */
+    height: 30px; /* Ajoutez une hauteur fixe pour les boutons */
+    justify-content: center; /* Ajoutez ceci pour centrer le contenu du bouton */
+    align-items: center; /* Ajoutez ceci pour centrer le contenu du bouton */
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+
+
+
+
+
