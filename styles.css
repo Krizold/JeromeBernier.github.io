@@ -238,7 +238,7 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;
+    height: 40vh;
 }
 header nav ul li a:hover,
 #projets .filter-btn:hover,
@@ -311,8 +311,27 @@ header nav ul li a:hover,
 }
 
 
-
-
+/* Cachez les descriptions des compétences en mode téléphone */
+@media (max-width: 767px) {
+    .skills-container .skill-card p {
+      display: none;
+    }
+  }
+  
+/* Désactiver l'effet parallax et ajuster l'image de fond pour les tablettes et les téléphones */
+@media (max-width: 1024px) {
+    body .parallax-bg {
+      background-attachment: scroll;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    body .parallax-bg {
+      height: 30vh; /* Ajuster la hauteur de l'image pour les téléphones */
+    }
+  }
+  
 
 
 
