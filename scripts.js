@@ -57,4 +57,7 @@ $(document).ready(function(){
         }
     });
 });
-
+document.addEventListener('DOMContentLoaded', function () {
+    var rellax = new Rellax('#parallax, #parallax2');
+  });
+  
