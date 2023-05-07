@@ -225,7 +225,7 @@ footer {
 }
 /* Effet parallaxe */
 #parallax {
-    background-image: url('./image/pic4.jpg');
+    background-image: url('/img/pic4.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -233,7 +233,7 @@ footer {
     height: 40vh;
 }
 #parallax2 {
-    background-image: url('./image/Krizold_timesquare_postapocalyptic.png');
+    background-image: url('/img/Krizold_timesquare_postapocalyptic.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
