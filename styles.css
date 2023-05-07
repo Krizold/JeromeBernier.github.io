@@ -225,7 +225,7 @@ footer {
 }
 /* Effet parallaxe */
 #parallax {
-    background-image: url('https://imgur.com/KhzwW2J');
+    background-image: url('https://res.cloudinary.com/dcnkxs82s/image/upload/v1683452782/pic4_hgkbm6.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -233,7 +233,7 @@ footer {
     height: 40vh;
 }
 #parallax2 {
-    background-image: url('https://imgur.com/tHXWsjm');
+    background-image: url('https://res.cloudinary.com/dcnkxs82s/image/upload/v1683452783/bg1_zthc3c.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
