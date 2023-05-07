@@ -69,39 +69,4 @@ $(document).ready(function(){
         }
     });
 });
-// Anime les barres de progression des compétences
-function animateSkillBars() {
-    const skills = document.querySelectorAll(".skill");
-    skills.forEach((skill) => {
-        const progressBar = skill.querySelector(".progress-bar");
-        const skillValue = getComputedStyle(progressBar).getPropertyValue("--skill-value");
-        progressBar.style.width = "0%";
 
-        if (isElementInViewport(skill)) {
-            progressBar.style.transition = "width 2s";
-            progressBar.style.width = skillValue + "%";
-        }
-    });
-}
-
-// Vérifie si un élément est visible à l'écran
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Initialise AOS (Animate on Scroll) et ajoute un événement pour animer les barres de compétences
-AOS.init({
-    duration: 800,
-    easing: "ease-in-out",
-    once: true,
-    startEvent: "DOMContentLoaded",
-    beforeInit: animateSkillBars,
-});
-
-window.addEventListener("scroll", animateSkillBars);
