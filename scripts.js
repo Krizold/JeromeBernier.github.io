@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-
     // Fonction pour gérer l'apparition des éléments animés lors du défilement
     function animateOnScroll() {
         const animatedElements = document.querySelectorAll('.animate');
@@ -30,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
     // Initialisation des fonctions
     animateOnScroll();
 
