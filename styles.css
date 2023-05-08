@@ -455,3 +455,9 @@ header nav ul li a:hover,
 .hide-parallax {
     display: none;
 }
+/* Faire disparaître le parallax pour les écrans de taille inférieure à 1024px */
+@media (max-width: 1024px) {
+    #parallax, #parallax2 {
+        display: none;
+    }
+}
