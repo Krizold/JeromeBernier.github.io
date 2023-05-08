@@ -29,27 +29,27 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    // Fonction pour détecter si l'appareil est un appareil iOS
-    function isIOS() {
-        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+ // Fonction pour détecter si l'appareil est un appareil iOS
+function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+// Fonction pour ajouter la classe parallax-ios aux sections parallax sur iOS
+function applyIOSParallaxStyles() {
+    if (isIOS()) {
+        const parallaxSections = document.querySelectorAll("#parallax, #parallax2");
+
+        parallaxSections.forEach((section) => {
+            section.classList.add("parallax-ios");
+            section.style.backgroundAttachment = "scroll";
+        });
     }
+}
 
-    // Fonction pour ajouter la classe parallax-ios aux sections parallax sur iOS
-    function applyIOSParallaxStyles() {
-        if (isIOS()) {
-            const parallaxSections = document.querySelectorAll("#parallax, #parallax2");
-
-            parallaxSections.forEach((section) => {
-                section.classList.add("parallax-ios");
-            });
-        }
-    }
-
-    // Appelez la fonction applyIOSParallaxStyles() au chargement de la page
-    document.addEventListener("DOMContentLoaded", function () {
-        applyIOSParallaxStyles();
-    });
-
+// Appelez la fonction applyIOSParallaxStyles() au chargement de la page
+document.addEventListener("DOMContentLoaded", function () {
+    applyIOSParallaxStyles();
+});
     // Initialisation des fonctions
     animateOnScroll();
 
