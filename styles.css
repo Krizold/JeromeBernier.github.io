@@ -436,8 +436,18 @@ header nav ul li a:hover,
         background-position: center;
     }
 }
+
 @supports (-webkit-overflow-scrolling: touch) {
     body .parallax-bg {
         background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Spécifique pour les iPhones en mode portrait */
+    @media (max-width: 414px) {
+        body .parallax-bg {
+            height: 40vh; /* Ajuster la hauteur de l'image pour les iPhones en mode portrait */
+        }
     }
 }
