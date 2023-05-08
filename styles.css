@@ -382,7 +382,10 @@ header nav ul li a:hover,
         padding: 0 10px;
         margin-bottom: 20px;
     }
-
+    .download-btn {
+        display: inline-block;
+    }
+    
     /* Cache les descriptions des compétences en mode téléphone */
     .skill-card p {
         display: none;
@@ -400,6 +403,12 @@ header nav ul li a:hover,
     }
 }
 
+/* Styles par défaut pour tous les écrans */
+#parallax, #parallax2 {
+    background-size: cover; /* Changez 'contain' en 'cover' pour que l'image couvre tout l'espace disponible */
+    background-position: center;
+}
+
 /* Désactiver l'effet parallax et ajuster l'image de fond pour les tablettes et les téléphones */
 @media (max-width: 1024px) {
     body .parallax-bg {
@@ -412,5 +421,18 @@ header nav ul li a:hover,
     body .parallax-bg {
         height: 30vh;
         /* Ajuster la hauteur de l'image pour les téléphones */
+    }
+    
+    #parallax, #parallax2 {
+        background-size: contain;
+        background-position: top center;
+    }
+}
+
+/* Styles spécifiques pour les écrans desktop */
+@media (min-width: 1025px) {
+    #parallax, #parallax2 {
+        background-size: cover;
+        background-position: center;
     }
 }
