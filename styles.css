@@ -285,20 +285,6 @@ footer {
     background-size: cover;
     height: 40vh;
 }
-/* Styles spécifiques pour les appareils iOS */
-.parallax-ios {
-    background-size: cover;
-    background-position: center;
-    /* Ajoutez d'autres styles spécifiques à iOS si nécessaire */
-}
-
-@media (max-width: 767px) {
-    .parallax-ios {
-        background-size: contain;
-        background-position: top center;
-    }
-}
-
 
 header nav ul li a:hover,
 #projets .filter-btn:hover,

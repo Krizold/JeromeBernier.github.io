@@ -29,21 +29,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
- // Fonction pour détecter si l'appareil est un appareil iOS
+// Fonction pour détecter si l'appareil est un appareil iOS
 function isIOS() {
+    // Teste si l'agent utilisateur est un iPad, iPhone ou iPod, et vérifie également que ce n'est pas un appareil Windows
     return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 }
 
-// Fonction pour ajouter la classe parallax-ios aux sections parallax sur iOS
-function applyIOSParallaxStyles() {
-    if (isIOS()) {
-        const parallaxSections = document.querySelectorAll("#parallax, #parallax2");
+// Si la fonction isIOS() renvoie true, cela signifie que nous sommes sur un appareil iOS
+if (isIOS()) {
+    // Sélectionnez toutes les sections parallax en utilisant leurs IDs
+    const parallaxSections = document.querySelectorAll("#parallax, #parallax2");
 
-        parallaxSections.forEach((section) => {
-            section.classList.add("parallax-ios");
-            section.style.backgroundAttachment = "scroll";
-        });
-    }
+    // Pour chaque section parallax, ajoutez la classe "hide-parallax"
+    parallaxSections.forEach((section) => {
+        section.classList.add("hide-parallax");
+    });
 }
 
 // Appelez la fonction applyIOSParallaxStyles() au chargement de la page
