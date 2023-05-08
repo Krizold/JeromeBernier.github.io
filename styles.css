@@ -9,11 +9,23 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Appliquez la police Lato au texte de corps et aux autres éléments */
-body, p, ul, ol, input, button {
+body,
+p,
+ul,
+ol,
+input,
+button {
     font-family: 'Lato', sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
     font-family: 'Roboto', sans-serif;
 }
@@ -59,7 +71,8 @@ header nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%; /* Ajustez cette valeur selon vos préférences */
+    width: 70%;
+    /* Ajustez cette valeur selon vos préférences */
     margin-left: auto;
     margin-right: auto;
 }
@@ -81,6 +94,21 @@ section {
     font-size: 3rem;
 }
 
+.download-btn {
+    background-color: #f4c242;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.download-btn:hover {
+    background-color: #333;
+    color: #f4c242;
+}
 
 /* Section Compétences */
 .skills-container {
@@ -109,9 +137,10 @@ section {
 .skill-card p {
     font-size: 0.9rem;
 }
+
 /* Modifier la couleur de fond de la section Compétences */
 #skills {
-    background-color: #222; 
+    background-color: #222;
 }
 
 /* Projets */
@@ -149,16 +178,25 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #222;
 }
-#a-propos {
-    background-color: #222; 
+
+#a-propos p {
+    text-align: justify;
+    text-indent: 3rem;
 }
+
 .about-container {
-    max-width: 800px; /* Limitez la largeur à une valeur confortable pour la lecture */
-    margin: 0 auto; /* Centrez le conteneur sur la page */
-    text-align: left; /* Alignez le texte à gauche */
-    line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
-    font-size: 1rem; /* Ajustez la taille de la police si nécessaire */
+    max-width: 800px;
+    /* Limitez la largeur à une valeur confortable pour la lecture */
+    margin: 0 auto;
+    /* Centrez le conteneur sur la page */
+    text-align: left;
+    /* Alignez le texte à gauche */
+    line-height: 1.6;
+    /* Espacement entre les lignes pour améliorer la lisibilité */
+    font-size: 1rem;
+    /* Ajustez la taille de la police si nécessaire */
 }
 
 /* Contact */
@@ -167,12 +205,16 @@ section {
     margin: 0 auto;
     padding-top: 5rem;
 }
+
 .contact-section {
-    margin: 0 auto; /* Centrez la section sur la page */
-    padding: 4rem 0; /* Ajustez l'espacement intérieur en fonction de vos préférences */
+    margin: 0 auto;
+    /* Centrez la section sur la page */
+    padding: 4rem 0;
+    /* Ajustez l'espacement intérieur en fonction de vos préférences */
 }
 
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
     width: 100%;
     margin-bottom: 1.5rem;
     padding: 0.5rem;
@@ -212,6 +254,7 @@ footer {
         align-items: center;
     }
 }
+
 /* Ajouter cette classe aux sections pour les animer */
 .animate {
     opacity: 0;
@@ -223,6 +266,7 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* Effet parallaxe */
 #parallax {
     background-image: url('https://res.cloudinary.com/dcnkxs82s/image/upload/v1683452782/pic4_hgkbm6.jpg');
@@ -232,6 +276,7 @@ footer {
     background-size: cover;
     height: 40vh;
 }
+
 #parallax2 {
     background-image: url('https://res.cloudinary.com/dcnkxs82s/image/upload/v1683452783/bg1_zthc3c.png');
     background-attachment: fixed;
@@ -240,6 +285,7 @@ footer {
     background-size: cover;
     height: 40vh;
 }
+
 header nav ul li a:hover,
 #projets .filter-btn:hover,
 #contact button:hover {
@@ -251,6 +297,7 @@ header nav ul li a:hover,
     background-color: #333;
     color: #f4c242;
 }
+
 /* Photo de profil */
 .profile-photo {
     margin-top: 1rem;
@@ -270,6 +317,7 @@ header nav ul li a:hover,
     align-items: center;
     padding: 2rem 0;
 }
+
 /* Centrer la div carousel-container */
 #projets .carousel-container {
     display: flex;
@@ -291,7 +339,8 @@ header nav ul li a:hover,
 #projets .owl-prev,
 #projets .owl-next {
     position: static;
-    margin: 0 1rem; /* Augmenter la marge pour éviter le chevauchement */
+    margin: 0 1rem;
+    /* Augmenter la marge pour éviter le chevauchement */
 }
 
 /* Ajustement des boutons et de la taille de la police */
@@ -299,40 +348,69 @@ header nav ul li a:hover,
     pointer-events: all;
     background: rgba(255, 255, 255, 0.8);
     color: #333;
-    font-size: 14px; /* Ajustez la taille de la police */
-    padding: 6px 12px; /* Modifiez la taille du bouton en ajustant le padding */
+    font-size: 14px;
+    /* Ajustez la taille de la police */
+    padding: 6px 12px;
+    /* Modifiez la taille du bouton en ajustant le padding */
     border-radius: 3px;
     margin: 0 1rem;
-    width: 80px; /* Ajoutez une largeur fixe pour les boutons */
-    height: 30px; /* Ajoutez une hauteur fixe pour les boutons */
-    justify-content: center; /* Ajoutez ceci pour centrer le contenu du bouton */
-    align-items: center; /* Ajoutez ceci pour centrer le contenu du bouton */
+    width: 80px;
+    /* Ajoutez une largeur fixe pour les boutons */
+    height: 30px;
+    /* Ajoutez une hauteur fixe pour les boutons */
+    justify-content: center;
+    /* Ajoutez ceci pour centrer le contenu du bouton */
+    align-items: center;
+    /* Ajoutez ceci pour centrer le contenu du bouton */
     font-family: 'Lato', sans-serif;
 }
 
-
-/* Cachez les descriptions des compétences en mode téléphone */
+/* CSS pour mobile */
 @media (max-width: 767px) {
-    .skills-container .skill-card p {
-      display: none;
+
+    /* Affichage des compétences en deux colonnes pour les mobiles */
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
     }
-  }
-  
+
+    /* Largeur et espacement des cartes de compétences pour les mobiles */
+    .skill-card {
+        flex: 0 0 50%;
+        max-width: 45%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Cache les descriptions des compétences en mode téléphone */
+    .skill-card p {
+        display: none;
+    }
+
+    /* Positionnement des compétences dans les colonnes gauche et droite */
+    .skill-card:nth-child(odd) {
+        padding-right: 0px;
+        padding-left: 0;
+    }
+
+    .skill-card:nth-child(even) {
+        padding-right: 0;
+        padding-left: 0px;
+    }
+}
+
 /* Désactiver l'effet parallax et ajuster l'image de fond pour les tablettes et les téléphones */
 @media (max-width: 1024px) {
     body .parallax-bg {
-      background-attachment: scroll;
-      transform: translateY(0) scale(1);
+        background-attachment: scroll;
+        transform: translateY(0) scale(1);
     }
-  }
-  
-  @media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
     body .parallax-bg {
-      height: 30vh; /* Ajuster la hauteur de l'image pour les téléphones */
+        height: 30vh;
+        /* Ajuster la hauteur de l'image pour les téléphones */
     }
-  }
-  
-
-
-
-
+}
