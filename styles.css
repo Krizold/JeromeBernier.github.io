@@ -419,7 +419,7 @@ header nav ul li a:hover,
 
 @media (max-width: 767px) {
     body .parallax-bg {
-        height: 30vh;
+        height: 50vh;
         /* Ajuster la hauteur de l'image pour les téléphones */
     }
     
@@ -434,5 +434,10 @@ header nav ul li a:hover,
     #parallax, #parallax2 {
         background-size: cover;
         background-position: center;
+    }
+}
+@supports (-webkit-overflow-scrolling: touch) {
+    body .parallax-bg {
+        background-attachment: scroll;
     }
 }
