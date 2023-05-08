@@ -36,11 +36,12 @@ function isIOS() {
 }
 
 // Si la fonction isIOS() renvoie true, cela signifie que nous sommes sur un appareil iOS
-if (isIOS()) {
-    // Sélectionnez toutes les sections parallax en utilisant leurs IDs
-    const parallaxSections = document.querySelectorAll("#parallax, #parallax2");
+function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
 
-    // Pour chaque section parallax, ajoutez la classe "hide-parallax"
+if (isIOS()) {
+    const parallaxSections = document.querySelectorAll("#parallax, #parallax2");
     parallaxSections.forEach((section) => {
         section.classList.add("hide-parallax");
     });
