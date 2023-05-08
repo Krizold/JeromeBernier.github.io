@@ -34,18 +34,20 @@ document.addEventListener("DOMContentLoaded", function () {
         return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     }
 
-    // Gérer l'effet parallax lors du défilement
-    document.addEventListener("scroll", function () {
-        if (!isIOS()) { // Ajoutez cette condition pour vérifier si l'appareil n'est pas un appareil iOS
-            const parallaxElements = document.querySelectorAll(".parallax-bg");
+    // Fonction pour ajouter la classe parallax-ios aux sections parallax sur iOS
+    function applyIOSParallaxStyles() {
+        if (isIOS()) {
+            const parallaxSections = document.querySelectorAll("#parallax, #parallax2");
 
-            parallaxElements.forEach((element) => {
-                const scrollPosition = window.pageYOffset;
-                const parallaxSpeed = 0.3;
-
-                element.style.transform = `translateY(${-scrollPosition * parallaxSpeed}px) scale(1.2)`;
+            parallaxSections.forEach((section) => {
+                section.classList.add("parallax-ios");
             });
         }
+    }
+
+    // Appelez la fonction applyIOSParallaxStyles() au chargement de la page
+    document.addEventListener("DOMContentLoaded", function () {
+        applyIOSParallaxStyles();
     });
 
     // Initialisation des fonctions
