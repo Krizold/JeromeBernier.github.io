@@ -451,3 +451,7 @@ header nav ul li a:hover,
         }
     }
 }
+/* Ajoutez cette classe pour cacher les sections parallax sur iOS */
+.hide-parallax {
+    display: none;
+}
